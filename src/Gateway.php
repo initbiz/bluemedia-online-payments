@@ -164,8 +164,8 @@ class Gateway
      */
     protected function checkPhpEnvironment()
     {
-        if (!version_compare(PHP_VERSION, '5.5', '>=')) {
-            throw new RuntimeException(sprintf('Required at least PHP version 5.5, current version "%s"', PHP_VERSION));
+        if (!version_compare(PHP_VERSION, '7.0', '>=')) {
+            throw new RuntimeException(sprintf('Required at least PHP version 7.0, current version "%s"', PHP_VERSION));
         }
         if (!extension_loaded('xmlwriter')) {
             throw new RuntimeException('Extension "xmlwriter" is required');
