@@ -424,7 +424,7 @@ class ItnIn extends AbstractModel
     public function setAmount($amount)
     {
         Validator::validateAmount($amount);
-        $this->amount = (float) $amount;
+        $this->amount = $amount;
 
         return $this;
     }
